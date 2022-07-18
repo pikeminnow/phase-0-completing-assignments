@@ -1,0 +1,128 @@
+note:
+
+pre-work
+
+phase 0
+
+Setting up the Environment
+ in order to clone this repository it was necessary to `git init` in the intended directory then `git pull` the intended repository.
+
+then i removed this entire directory and cloned from git into the parent directory. this worked. do not initialize assignments with `git pull`
+
+programming as a conversation part 1
+
+Definitions:
+
+Notation: Specialized vocabulary or system of symbols for communication
+Programming: act of creating programs/documents in a notation system that can be understood by humans and computers
+Programming language: Defined notation for asking a computer to do work
+
+Expression: unit of ideas that have meaning
+	a combination of information (data) and symbols (operators)
+Evaluation: identifying meaning in an expression
+	interpreting an expression, according to rules, to produce a return value
+Return Value: response to an expression once it has been evaluated
+Variable: A named unit of data
+Data Type: Category of data that defines which operators and rules are available to that data
+Boolean: True/False expression
+Comparison expressions: greater than, less than, equal to. in varying levels of strictness
+
+Key Concept:
+
+The Essential Three Expressions:
+	Constant Expression
+		A constant expression is a valid response as a return value. When performing arithmetic, the goal is to work down all the operators until there is no further work. '3*(10-4)' is not a valid return value, because first '10-4' needs to be evaluated, and then '3*6'. the resultant '18' is simply data with no operators, making it a constant expression.
+
+	Assignment Expression
+		An assignment expression binds a variable name to its corresponding variable value. In JavaScript, the convention is to use camelCase for variable names. Return values of an assignment expression is the value assigned to the variable name.
+
+	Variable lookup expression
+		A variable lookup expression returns the variable value associated with a variable name. Return values of a variable lookup expression is the value assigned to the variable name.	
+
+Variable assignment operators:
+
+	Back in my day. we used `var` and that's how we likesed it.
+
+	"As your JavaScript powers increase with experience, you'll develop a more nuanced understanding of what to use where. However, for now, this is a good rule of thumb:
+
+	Use `var`... never.
+	Use `let`... when you know the value of a variable will change. For example, a counter variable that starts at 0 and is subsequently incremented to 1, 2, 3, and so on. In the lessons on looping and iteration in JavaScript, let will have its moment in the spotlight.
+	Use `const`... for every other variable."
+
+Seven Data Types in JavaScript:
+
+  Primitive types represent a single value or data unit
+	Number
+	String
+	Array
+	null (intentionally absent object, internally labelled as an object)
+	undefined (a variable name with no value - contextually *not yet defined*)
+	Symbols (new as of E6 and used to define object properties)
+  Advanced data type:
+	Object
+		A collection of data. Objects contain a list of properties in key-value pairings.
+
+Data type interactions
+	Stricter programming languages will expect the programmer to define how mixed-type expressions are handled. Loosely typed languages like JavaScript will return something, even and especially if a mixed-type expression will result in a confusingly-typed return value. Good habits are not to depend on JavaScript's sometimes reasonable mixed-type handling and use interpolation ( as in `The value of variable is ${variable}` ) or the tostring() method; so that when returning to work with strongly-typed syntax the habit is already there.
+
+Describe the Difference Between Truthy and Falsey Values
+	All values in Javascript, of any data type (String, Number, etc.), are treated as either truthy or falsey. The following values are falsey:
+
+	false
+	null
+	undefined
+	0
+	NaN
+	An empty string ("", '')
+	Every other value is truthy.
+
+	To check whether a value is truthy or falsey, we can pass it to the global Boolean object, which converts the value into its boolean equivalent.
+
+JavaScript includes four equality operators:
+
+	strict equality operator (===)
+	strict inequality operator (!==)
+	loose equality operator (==)
+	loose inequality operator (!=)
+	These operators allow us to compare values and determine whether they are the same.
+
+	Strict Equality Operator === and Strict Inequality Operator !==
+		The strict equality operator returns true if two values are equal without performing type conversions. Even if the values on both sides of the operator look similar (e.g., '42' === 42), the === operator will only return true if the data types also match.
+	The strict inequality operator returns true if two values are not equal without performing type conversions.
+	You should prefer === and !== for comparisons.
+
+	Loose Equality Operator == and Loose Inequality Operator !=
+	The loose equality operator returns true if two values are equal:
+
+	42 == 42;
+	// => true
+	However, it will also return true if it can perform a type conversion (e.g., changing the string '42' into the number 42) that makes the two values equal.
+
+JavaScript includes four relational operators:
+
+	greater than (>)
+	greater than or equals (>=)
+	less than (<)
+	less than or equals (<=)
+	The behavior of these operators is consistent with the meaning of the corresponding symbols in mathematics.
+
+JavaScript has three logical operators, NOT (!), AND (&&), and OR (||)
+	Since the NOT(!) operator returns truthiness, two !! can be used to evaluate the truthiness of any value or expression even if that expression did not intrinsically have truthiness before.
+	 !!4<9
+	true
+	 !!4>9
+	false
+	 !!!!!!!!!!!!!!!4>9
+	false
+	 !!!!!!!!!!!!!!!4<9
+	true
+	
+	AND (&&) and OR (||) operate on the same (both true = true, one true = true) logic as they do in every other logical framework.Assuming that there are !&& and XOR expressions available too for the discerning logician.
+
+The Ternary Expression
+	True or false value ? Return Value if True : Return Value if False
+
+	This is a conditional expression which contains an expression to be evaluated and two presupplied values IF the expression is true OR IF the expression is false. 
+
+
+~
